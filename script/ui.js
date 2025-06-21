@@ -125,7 +125,7 @@ function createNotInStockCard(item, isFlower) {
                </div>`
             : `<div style="position: relative;">
                  <img src="${item.image}" class="card-img-top" alt="${displayTitle}" 
-                   style="${!isFlower ? 'height: 180px; object-fit: cover;' : ''} opacity: 0.6;">
+                   style="${!isFlower ? 'height: 180px; object-fit: cover;' : ''} opacity: 0.35;">
                  <div class="position-absolute top-80 start-50 translate-middle" 
                       style="z-index: 10; padding: 5px 10px; border-radius: 20px;">
                    <span class="text-danger fw-bold" style="font-size: 0.75rem; white-space: nowrap;">
@@ -134,7 +134,7 @@ function createNotInStockCard(item, isFlower) {
                  </div>
                </div>`
         }
-        <div class="card-body text-center" style="opacity: 0.6;">
+        <div class="card-body text-center" style="opacity: 0.35;">
           ${!isNoneWrap ? `<h5 class="card-title">${displayTitle}</h5>` : ''}
           <p class="card-text">${item.price} ₽</p>
         </div>
