@@ -55,6 +55,7 @@ function renderFlowers() {
         kk: flower.name_kk
       },
       price: flower.price,
+      discount_price: flower.discount_price,
       image: flower.image
     }, true);
   });
@@ -148,6 +149,7 @@ function createCard(item, isFlower, isSelected = false) {
   const displayTitle = item.name[currentLang] || "-";
   const cardClass = `card text-center ${!isFlower && isSelected ? 'wrap-selected' : ''}`;
   const cardClick = !isFlower ? `onclick="selectWrap('${item.id}')"` : "";
+  const hasDiscount = item.discount_price && parseFloat(item.discount_price) < parseFloat(item.price);
 
   return `
     <div class="col-md-4 mb-3">
@@ -161,7 +163,14 @@ function createCard(item, isFlower, isSelected = false) {
         }
         <div class="card-body">
           ${!isNoneWrap ? `<h5 class="card-title">${displayTitle}</h5>` : ''}
-          <p class="card-text">${item.price} ₸</p>
+          <div class="price-display">
+            ${
+              hasDiscount
+                ? `<span class="original-price">${item.price} ₸</span>
+                   <span class="discount-price">${item.discount_price} ₸</span>`
+                : `<span>${item.price} ₸</span>`
+            }
+          </div>
           ${
             isFlower
               ? `<div class="quantity-controls">
@@ -176,7 +185,6 @@ function createCard(item, isFlower, isSelected = false) {
     </div>
   `;
 }
-
 function updateUIText() {
   document.getElementById("flower-title").innerText = translations[currentLang].chooseFlowers;
   document.getElementById("wrap-title").innerText = translations[currentLang].chooseWrap;

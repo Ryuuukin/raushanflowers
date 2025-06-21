@@ -82,7 +82,7 @@ h2 {
 
 
 .card img {
-  height: 85px;
+  height: 80px;
   display: block;
   margin: 0 auto;
   object-fit: contain;
@@ -97,12 +97,12 @@ h2 {
   line-height: 1.2;
   overflow: hidden;
   text-overflow: ellipsis;
-  margin: 0.25rem 0 0.25rem 0; /* top/bottom margins small */
+  margin: 0.25rem 0 0.25rem 0; 
 }
 
 
 .card .card-text {
-  color: #6c757d; /* Bootstrap's text-muted gray */
+  color: #6c757d; 
   font-weight: 500;
   margin-bottom: 0.1rem;
   font-size: 0.8rem;
@@ -175,7 +175,6 @@ h2 {
 }
 
 /* === Wrapping Image Layers === */
-.wrap-back,
 .wrap-front {
   position: absolute;
   bottom: 0;
@@ -184,10 +183,6 @@ h2 {
   width: 200px;
   pointer-events: none;
   transition: all 0.4s ease;
-}
-
-.wrap-back {
-  z-index: 0;
 }
 
 .wrap-front {
@@ -358,4 +353,23 @@ h2 {
   width: 100%;
 }
 
+.price-display {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.25rem;
+  color: #6c757d;
+  margin: 0.2rem 0;
+}
 
+.original-price {
+  text-decoration: line-through;
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+.discount-price {
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: #000000;
+}
