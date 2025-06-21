@@ -82,7 +82,7 @@ h2 {
 
 
 .card img {
-  height: 90px;
+  height: 85px;
   display: block;
   margin: 0 auto;
   object-fit: contain;
@@ -105,14 +105,14 @@ h2 {
   color: #6c757d; /* Bootstrap's text-muted gray */
   font-weight: 500;
   margin-bottom: 0.1rem;
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
 
 .card .card-body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; /* center vertically */
+  justify-content: center;
   padding: 0.75rem;
   flex-grow: 1;
 }
@@ -129,14 +129,14 @@ h2 {
 }
 
 .quantity-controls button {
-  width: 30px;
-  height: 30px;
+  width: 25x;
+  height: 25px;
   border-radius: 50%;
   background-color: #94304b;
   color: white;
   border: none;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -329,12 +329,12 @@ h2 {
 
 #order-btn {
   font-size: 1.3rem;
-  width: 390px;
+  width: 350px;
 }
 
 #delivery-btn {
   font-size: 1.3rem;
-  width: 390px;
+  width: 350px;
   background-color: #94304b;
   border-color: #94304b;
   color: #ffffff;
